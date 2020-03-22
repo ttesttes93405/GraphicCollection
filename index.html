@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-TW" prefix="og:http://ogp.me/ns#">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Collection</title>
+        <!--<link rel="Shortcut Icon" type="image/x-icon" href="" />-->
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+        </style> 
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        <script src="js/vue.min.js"></script>
+
+    </head>
+
+
+    <body>
+
+        <div id="app">
+            <div class="collection-container">
+                <div class="item-container" v-for="(item, index) in collections" v-if="currentCollectionIndex === index">
+                    <h1 class="title">{{item.title}}</h1>
+                    <iframe v-bind:src="item.embedLink" class="content"></iframe>
+                </div>
+                <div class="btns">
+                    <button v-on:click="reduceIndex()">
+                        <img src="pic/arrow-left.svg"/>
+                        <p>Previous</p>
+                    </button>
+                    <p class="page">{{currentCollectionIndex+1}} / {{collections.length}}</p>
+                    <button v-on:click="addIndex()">
+                        <p>Next</p>
+                        <img src="pic/arrow-right.svg"/>
+                    </button>
+                </div>
+                <div class="footer">
+                    <a href="https://ttesttes93405.github.io/OwenCollections/" target="_blank">
+                        <img src="pic/Owen01.jpg" />
+                        <span>Owen Sun</span>
+                    </a>
+                </div>  
+            </div>
+        </div>
+
+
+
+
+
+
+        <script src="js/main.js"></script>
+    </body>
+
+
+
+</html>

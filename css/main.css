@@ -1,0 +1,242 @@
+body, html {
+  font-family: "Quicksand", sans-serif;
+  background-color: #111111;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#app .collection-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+#app .collection-container .item-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#app .collection-container .item-container .title {
+  display: inline-block;
+  color: #dddddd;
+  padding: 0;
+  margin: 30px 0;
+  font-size: 40px;
+  text-align: center;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+#app .collection-container .item-container .content {
+  margin: -25px;
+  -webkit-transform: scale(0.875);
+          transform: scale(0.875);
+  display: inline-block;
+  border-style: none;
+  height: 400px;
+  width: 400px;
+  border-radius: 10px;
+  -webkit-animation-name: scaleIn;
+          animation-name: scaleIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+#app .collection-container .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  margin: 20px 0;
+}
+
+#app .collection-container .btns button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Quicksand", sans-serif;
+  width: 120px;
+  height: 50px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  margin: 0;
+  padding: 0 10px;
+  font-size: 16px;
+  border-style: none;
+  background-color: #444444;
+  color: #ffffff;
+  border-radius: 10px;
+  opacity: 0.8;
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+#app .collection-container .btns button:hover {
+  opacity: 1;
+}
+
+#app .collection-container .btns button p {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0;
+  padding: 0;
+}
+
+#app .collection-container .btns button img {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  margin: 0;
+}
+
+#app .collection-container .btns .page {
+  display: inline-block;
+  color: #bdbdbd;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+#app .collection-container .footer {
+  margin: 50px 0 50px;
+  font-size: 16px;
+  border: solid 1px #1A1A1A;
+  border-radius: 10px;
+}
+
+#app .collection-container .footer a {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-text-decoration-line: none !important;
+          text-decoration-line: none !important;
+}
+
+#app .collection-container .footer img {
+  width: 50px;
+  height: 50px;
+  border-radius: 9999px;
+}
+
+#app .collection-container .footer span {
+  margin: 0;
+  padding: 0 20px;
+  color: #aaaaaa;
+  font-size: 20px;
+}
+
+@-webkit-keyframes scaleIn {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  75% {
+    -webkit-transform: scale(0.88375);
+            transform: scale(0.88375);
+  }
+  100% {
+    -webkit-transform: scale(0.875);
+            transform: scale(0.875);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  75% {
+    -webkit-transform: scale(0.88375);
+            transform: scale(0.88375);
+  }
+  100% {
+    -webkit-transform: scale(0.875);
+            transform: scale(0.875);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=main.css.map */
